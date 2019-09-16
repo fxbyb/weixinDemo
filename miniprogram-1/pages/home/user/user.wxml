@@ -1,0 +1,17 @@
+<!--pages/home/user/user.wxml-->
+<view class="header">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <text>欢迎你，{{userInfo.nickName}}</text>
+</view>
+<view class="list-wrap">
+  <view class="list-item">
+    <wxc-list wx:for="{{list}}" wx:key="index" class="item" title="{{item.title}}" desc="{{item.slot? '' : item.desc}}" mode="{{index == list.length-1 ? 'none': ''}}" src="{{item.src}}">
+      <view wx:if="{{item.slot && item.desc}}" class="desc-highlight">{{item.desc}}</view>
+    </wxc-list>
+  </view>
+
+  <view class="list-item">
+    <wxc-list class="item" icon="help" icon-color="#69A0DD" title="客服与帮助"></wxc-list>
+    <wxc-list class="item" icon="feedback" icon-color="#69A0DD" mode="none" title="意见反馈"></wxc-list>
+  </view>
+</view>

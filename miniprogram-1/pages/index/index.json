@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    
+  },
+  "navigationBarTitleText": "准备登录"
 }

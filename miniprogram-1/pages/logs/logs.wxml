@@ -4,10 +4,3 @@
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
 </view>
-<view>
-logs文件
-</view>
-<template name="B">
-  <text> B template </text>
-</template>
-<template is="B"></template>

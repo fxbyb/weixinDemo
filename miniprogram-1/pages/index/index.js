@@ -11,22 +11,15 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    console.log('logs')
-    wx.switchTab({
-      url: '../logs/logs'
-    })
-  },
-  toTab() {
     wx.navigateTo({
-      url: '../login/login'
+      url: '../logs/logs'
     })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
-        hasUserInfo: true,
-        motto: '你好'
+        hasUserInfo: true
       })
     } else if (this.data.canIUse){
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -50,12 +43,6 @@ Page({
       })
     }
   },
-  onShareAppMessage: function () {
-    return {
-      title: '自定义转发标题',
-      path: '../logs/logs?id=123'
-    }
-  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
@@ -63,5 +50,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  toHome(){
+    console.log('跳转')
+    wx.switchTab({ url: '../../pages/home/user/user'})
   }
 })

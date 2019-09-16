@@ -1,48 +1,18 @@
-// pages/login/login.js
-const app = getApp()
+// pages/home/home.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name: '',
-    passWord: ''
+
   },
-  toTab(){
-    wx.switchTab({
-      url: '../index/index'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showModal({
 
-      title: '标题',
-
-      content: '告知当前状态，信息和解决方法',
-
-      confirmText: '主操作',
-
-      cancelText: '次要操作',
-
-      success: function (res) {
-
-        if (res.confirm) {
-
-          console.log('用户点击主操作')
-
-        } else if (res.cancel) {
-
-          console.log('用户点击次要操作')
-
-        }
-
-      }
-
-    })
   },
 
   /**
