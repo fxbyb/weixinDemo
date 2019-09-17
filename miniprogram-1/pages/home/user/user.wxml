@@ -5,7 +5,7 @@
 </view>
 <view class="list-wrap">
   <view class="list-item">
-    <wxc-list wx:for="{{list}}" wx:key="index" class="item" title="{{item.title}}" desc="{{item.slot? '' : item.desc}}" mode="{{index == list.length-1 ? 'none': ''}}" src="{{item.src}}">
+    <wxc-list wx:for="{{list}}" wx:key="index" class="item {{item.hover ? 'hoverItem':''}}" title="{{item.title}}" desc="{{item.slot? '' : item.desc}}" mode="{{index == list.length-1 ? 'none': ''}}" src="{{item.src}}" data-item="{{item}}" data-index="{{index}}"  bind:click="toNext">
       <view wx:if="{{item.slot && item.desc}}" class="desc-highlight">{{item.desc}}</view>
     </wxc-list>
   </view>

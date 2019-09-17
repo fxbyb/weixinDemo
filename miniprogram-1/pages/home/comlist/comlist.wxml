@@ -1,0 +1,14 @@
+<!--pages/home/comlist/comlist.wxml-->
+<view style="display:flex;justify-content: center;">
+<view class="title" style="display:flex" animation="lAnimate">这里是练习的小程序组件说明文字</view>
+</view>
+<view wx:for="{{list}}" wx:for-item="item" wx:key="index" class="content">
+  <view class="Ctitle {{item.show ? 'showItem':''}}" data-index="{{index}}" bindtap="clickcontent">
+    <text>{{item.title}}</text>
+    <icon color="{{item.show ? '#efefef':'black'}}" type="{{item.type}}"></icon>
+  </view>
+  <view wx:if="{{item.show}}" wx:for="{{item.itemlist}}" wx:for-item="smaitem" wx:key="smaindex" class="Ccontent" bindtap="naviTo" data-item="{{smaitem}}">
+    <text>{{smaitem.name}}</text>
+    <icon color="{{item.show ? '#efefef':'black'}}" type="search"></icon>
+  </view>
+</view>

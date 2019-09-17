@@ -1,0 +1,35 @@
+/* pages/home/comlist/comlist.wxss */
+page{
+  background-color: #efefef;
+}
+.title{
+  height: 50rpx;
+/*   display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.content{
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 40rpx;
+}
+.Ctitle{
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+.Ccontent{
+  display: flex;
+  justify-content: space-between;
+}
+.showItem{
+  color: #efefef;
+}
+.imgicon{
+  height: 40rpx;
+  width: 40rpx;
+}
+.Ccontent{
+  border-bottom: 1px solid #ccc;
+  padding: 15rpx 0;
+}

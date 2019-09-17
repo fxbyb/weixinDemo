@@ -1,0 +1,23 @@
+<!--pages/home/comlist/camera/camera.wxml-->
+<camera style="width: 100%; height: 300px;" device-position="{{camerato? 'front':'back'}}" flash="{{light? 'on':'off'}}"></camera>
+
+<view>
+  <label>摄像头转为前置</label>
+  <switch checked="{{camerato}}" bindchange="cameratochange"></switch>
+</view>
+<view>
+  <label>是否开启闪光灯</label>
+  <switch checked="{{light}}" bindchange="lightchange"></switch>
+
+  <view class="btn-area">
+    <button type="primary" bindtap="takePhoto">拍照</button>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="startRecord">开始录像</button>
+  </view>
+  <view class="btn-area">
+    <button type="primary" bindtap="stopRecord">结束录像</button>
+  </view>
+  <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+  <video wx:if="{{videoSrc}}" class="video" src="{{videoSrc}}"></video>
+</view>

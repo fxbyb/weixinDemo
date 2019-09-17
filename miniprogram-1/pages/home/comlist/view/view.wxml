@@ -1,0 +1,3 @@
+<!--pages/home/comlist/view/view.wxml-->
+<view>示例文字</view>
+<view>{{text}}</view>

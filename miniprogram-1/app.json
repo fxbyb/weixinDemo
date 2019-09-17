@@ -4,10 +4,23 @@
     "pages/logs/logs",
     "pages/home/home",
     "pages/home/user/user",
-    "pages/home/list/list"
+    "pages/home/list/list",
+    "pages/home/comlist/comlist",
+    "pages/home/comlist/view/view",
+    "pages/home/comlist/swiper/swiper",
+    "pages/home/comlist/camera/camera",
+    "pages/home/morecomlist/morecomlist"
   ],
   "tabBar": {
     "list": [
+      {
+        "pagePath": "pages/home/comlist/comlist",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/home/morecomlist/morecomlist",
+        "text": "扩展组件"
+      },
       {
         "pagePath": "pages/home/list/list",
         "text": "列表"

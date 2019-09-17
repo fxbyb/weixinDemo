@@ -45,3 +45,6 @@
 .list__desc--arrow {
     margin-left: 8rpx
 }
+.hoverItem{
+  background-color: #cccccc
+}

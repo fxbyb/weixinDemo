@@ -49,7 +49,19 @@ Page({
       src: 'https://s10.mogucdn.com/mlcdn/c45406/180109_26hggaiha8k7blig5k4ihk5k967ii_38x38.png'
     }]
 },
-
+  toNext: function($event){
+    console.log($event.currentTarget.dataset.item);
+    const item = $event.currentTarget.dataset.item;
+    wx.showToast({
+      title: item.title +'功能暂未开发',
+      icon: 'none'
+    })
+  },
+/*   touchOn: function ($event){
+    console.log($event.currentTarget.dataset.index);
+    const index = $event.currentTarget.dataset.index;
+    this.setData({ ['list[' + index + '].hover']: true})
+  }, */
 /**
  * 生命周期函数--监听页面加载
  */
