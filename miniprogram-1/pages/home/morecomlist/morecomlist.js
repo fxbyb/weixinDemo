@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    showLoading:true
   },
 
   /**
@@ -26,7 +26,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // "mp-loading": "/node_modules/weui-miniprogram/src/loading/loading"
+    setTimeout(() => {
+      this.setData({
+        showLoading:false
+      })
+    }, 2000);
   },
 
   /**

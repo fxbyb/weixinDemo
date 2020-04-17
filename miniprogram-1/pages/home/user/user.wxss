@@ -6,7 +6,15 @@
   padding-left: 20px;
   margin-bottom: 10px;
 }
-
+.loginbtn{
+  width: 128px;
+  margin: 250rpx auto 30rpx auto;
+}
+.tips{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;

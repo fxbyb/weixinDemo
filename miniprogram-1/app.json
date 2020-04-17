@@ -1,3 +1,4 @@
+
 {
   "pages": [
     "pages/index/index",
@@ -15,15 +16,15 @@
     "list": [
       {
         "pagePath": "pages/home/comlist/comlist",
-        "text": "组件"
+        "text": "示例组件"
       },
       {
         "pagePath": "pages/home/morecomlist/morecomlist",
-        "text": "扩展组件"
+        "text": "分类"
       },
       {
         "pagePath": "pages/home/list/list",
-        "text": "列表"
+        "text": "布艺"
       },
       {
         "pagePath": "pages/home/user/user",
@@ -34,7 +35,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "个人秀",
+    "navigationBarTitleText": "时代窗帘店",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

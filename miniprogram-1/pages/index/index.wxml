@@ -1,14 +1,16 @@
 <!--index.wxml-->
 <view class="container">
   <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" type="primary" bindgetuserinfo="getUserInfo"> 会员登录 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <mp-loading duration="{{900}}" ext-class="demo0" type="dot-gray" show="{{show}}" animated="{{animated}}"></mp-loading>
     </block>
   </view>
   <view class="usermotto">
     <!-- <text class="user-motto">{{motto}}</text> -->
-    <button bindtap="toHome">点击进入</button>
+    <button bindtap="toHome" wx:if="{{!hasUserInfo}}">游客模式进入</button>
+    <button bindtap="toHome" wx:else>会员模式进入</button>
   </view>
 </view>

@@ -3,5 +3,5 @@
     "wxc-icon": "../../../dist/packages/@minui/wxc-icon/dist/index",
     "wxc-list": "../../../dist/packages/@minui/wxc-list/dist/index"
   },
-  "backgroundColor": "#cccccc"
+  "navigationBarTitleText": "个人中心"
 }

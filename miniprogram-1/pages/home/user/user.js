@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {},
+    userInfo: null,
     list: [{
       title: '打卡领红包',
       desc: '您有1个10元红包可领取',
@@ -57,6 +57,11 @@ Page({
       icon: 'none'
     })
   },
+  login:function(){
+    wx.navigateTo({
+      url: '../../index/index',
+    })
+  },
 /*   touchOn: function ($event){
     console.log($event.currentTarget.dataset.index);
     const index = $event.currentTarget.dataset.index;
@@ -71,15 +76,6 @@ onLoad: function(options) {
     icon: 'success',
     duration: 2000
   });
-  if (app.globalData.userInfo) {
-    this.setData({
-      userInfo: app.globalData.userInfo
-    })
-  } else {
-    wx.navigateTo({
-      url: '../../index/index',
-    })
-  }
 },
 
 /**
@@ -98,9 +94,9 @@ onShow: function() {
       userInfo: app.globalData.userInfo
     })
   } else {
-    wx.navigateTo({
+    /* wx.navigateTo({
       url: '../../index/index',
-    })
+    }) */
   }
 },
 

@@ -1,2 +1,6 @@
 <!--pages/home/morecomlist/morecomlist.wxml-->
-<text>pages/home/morecomlist/morecomlist.wxml</text>
+<view >
+<!-- <mp-loading duration="{{900}}" ext-class="loading" type="dot-gray" show="{{showLoading}}" animated="true"></mp-loading> -->
+</view>
+<view>
+</view>

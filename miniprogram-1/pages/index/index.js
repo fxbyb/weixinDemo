@@ -46,13 +46,15 @@ Page({
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    if(e.detail.errMsg.indexOf(':ok') !=-1){
+      this.setData({
+        userInfo: e.detail.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
   toHome(){
-    console.log('跳转')
+    // "mp-loading": "../components/loading/loading"
     wx.switchTab({ url: '../../pages/home/user/user'})
   }
 })
