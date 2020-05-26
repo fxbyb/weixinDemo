@@ -1,6 +1,17 @@
 <!--pages/home/morecomlist/morecomlist.wxml-->
-<view >
-<!-- <mp-loading duration="{{900}}" ext-class="loading" type="dot-gray" show="{{showLoading}}" animated="true"></mp-loading> -->
+<view class="fixtab">
+	<!-- <mp-loading duration="{{900}}" ext-class="loading" type="dot-gray" show="{{showLoading}}" animated="true"></mp-loading> -->
+	<view wx:for="{{classificationList}}" class="{{classificationItem.active?'active':''}}" wx:key="listKey"
+  wx:for-item="classificationItem" bindtap="goTo" data-id="{{classificationItem.id}}">
+			{{classificationItem.title}}
+		</view>
 </view>
-<view>
+<view class="content">
+	<view wx:for="{{classificationList}}" wx:key="listKey" wx:for-item="classificationItem">
+		<text class="classificationItem-text {{'classificationItem-'+classificationItem.id}}">{{classificationItem.title}}</text>
+		<view wx:for="{{classificationItem.list}}" wx:key="itemKey" wx:for-item="item">
+			<image src="{{item.src}}"></image>
+			<text>{{item.title}}</text>
+		</view>
+	</view>
 </view>

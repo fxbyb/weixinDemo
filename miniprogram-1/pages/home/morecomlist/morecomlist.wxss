@@ -1,1 +1,23 @@
 /* pages/home/morecomlist/morecomlist.wxss */
+.fixtab{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 120rpx;
+  padding: 10rpx 0;
+  display: inline-block;
+  background-color: #f1f1f1;
+}
+.fixtab view{
+  line-height: 80rpx;
+  padding:0 20rpx 0 17rpx;
+  border-bottom: #fff;
+  border-left: 3rpx solid #f1f1f1;
+}
+.active{
+  background-color: #fff;
+  border-left-color: red;
+}
+.content{
+  padding-left: 120rpx;
+}
